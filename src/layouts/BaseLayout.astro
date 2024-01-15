@@ -2,9 +2,12 @@
 interface Props {
     pageTitle: string
 }
+import { ViewTransitions } from "astro:transitions";
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import type { ViewTransitions } from 'astro:transitions';
+import type { ViewTransitions } from 'astro:transitions';
 import '../styles/global.css';
 const { pageTitle } = Astro.props
 ---
@@ -15,10 +18,11 @@ const { pageTitle } = Astro.props
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <ViewTransitions />
   </head>
   <body>
     <Header />
-    <h1>{pageTitle}</h1>
+    <h1 transition:animate="slide">{pageTitle}</h1>
     <slot />
     <Footer />
     <script>
