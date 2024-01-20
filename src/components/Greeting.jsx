@@ -10,7 +10,6 @@ export default function Greeting({messages}) {
       <h3>{greeting}! Thank you for visiting!</h3>
       <button onClick={() => {
         setGreeting(randomMessage());
-        console.log(greeting)
       }}>
         New Greeting
       </button>

@@ -1,12 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting.jsx';
+import RandomJoke from "../components/RandomJoke.jsx";
 
 const pageTitle = "Home Page";
 ---
 <BaseLayout pageTitle={pageTitle}>
   <h2>My awesome Astro blog website</h2>
-  <Greeting messages={["Hi", "Hello", "Howdy", "Hey there"]} />
   <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
-
+  
+  <RandomJoke client:load />
 </BaseLayout>
